@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .urta{
+            text-align: center;
+        }
+        input{
+            border-radius: 5px;
+        }
+        .contaner{
+            background-color: rgb(232, 250, 133);
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        .button{
+            width: 150px;
+            height: 40px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="contaner">
+        <form action="#">
+          <center>
+            <table>
+              <thead>
+                <h3 class="urta">Personal Details</h3>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><label for="name">Name:</label></td>
+                  <td><input type="text" name="text" id="name" /></td>
+                </tr>
+                <tr>
+                  <td><label for="pass">Password:</label></td>
+                  <td><input type="password" name="password" id="pass" /></td>
+                </tr>
+                <tr>
+                  <td><label for="email">E-mail id:</label></td>
+                  <td><input type="email" name="email" id="email" /></td>
+                </tr>
+                <tr>
+                  <td><label for="gender">Gender:</label></td>
+                  <td>
+                    <input type="radio" name="gender" id="male" />
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" />
+                    <label for="female">Female</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="contact">Contact#:</label></td>
+                  <td><input type="tel" name="contact" id="contact" /></td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="urta"><h3>Educational Qualification</h3></td>
+                </tr>
+                <tr>
+                  <td><label for="degree">Degree:</label></td>
+                  <td><select name="combo" id="combo">
+                    <option value="combo">Group 1</option>
+                    <option value="combo">Group 2</option>
+                    <option value="combo">Group 3</option>
+                    <option value="combo">Group 4</option>
+                  </select></td>
+                </tr>
+                <tr>
+                  <td><label for="engi">Engineering:</label></td>
+                  <td><select name="combo" id="combo">
+                    <option value="combo">Group 1</option>
+                    <option value="combo">Group 2</option>
+                    <option value="combo">Group 3</option>
+                    <option value="combo">Group 4</option>
+                  </select></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><label for="hobbi">Hobbies:</label>
+                  
+                    <input type="checkbox" name="chess" id="chess" />
+                    <label for="chess">Playing chess</label>
+                    <input type="checkbox" name="book" id="book" />
+                    <label for="book">Reading Books</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="urta"><h3>Address</h3></td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <textarea
+                      name="address"
+                      id="address"
+                      rows="5"
+                      cols="38"
+                    ></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="attch">Attch Resume:</label></td>
+                  <td><input type="file" name="attch" id="attch" /></td>
+                </tr>
+                <tr class="urta"><td colspan="2"><input type="submit" value="Submit &#x2192;" class="button"></td></tr>
+              </tbody>
+            </table>
+          </center>
+        </form>
+    </div>
+  </body>
+</html>

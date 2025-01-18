@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .formalar {
+        background-color: white;
+        margin-left: 25%;
+        margin-right: 25%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 1%;
+        border: 2px solid black;
+      }
+      legend {
+        color: blue;
+      }
+      .qizil {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="formalar">
+      <form action="#">
+        <h1>Reservation Request</h1>
+        <fieldset>
+          <legend>General Information</legend>
+          <table>
+            <tr>
+              <td><label for="date">Arrival date:</label></td>
+              <td><input type="date" name="date" id="date" required/></td>
+              <td><label for="" class="qizil">Arrival is invalid.</label></td>
+            </tr>
+            <tr>
+              <td><label for="text">Nights:</label></td>
+              <td><input type="text" name="text" id="text" required/></td>
+              <td>
+                <label for="" class="qizil">Nights must be a number.</label>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="adult">Adults:</label></td>
+              <td>
+                <select name="adult" id="adult">
+                  <option value="adult">1</option>
+                  <option value="adult">2</option>
+                  <option value="adult">3</option>
+                  <option value="adult">4</option>
+                  <option value="adult">5</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="adult">Children:</label></td>
+              <td>
+                <select name="adult" id="adult">
+                  <option value="adult">0</option>
+                  <option value="adult">1</option>
+                  <option value="adult">2</option>
+                  <option value="adult">3</option>
+                  <option value="adult">4</option>
+                  <option value="adult">5</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+        <fieldset>
+          <legend>Preferences</legend>
+          <table>
+            <tr>
+              <td>
+                <label for="room_type">Room Type:</label>
+              </td>
+              <td>
+                <input type="radio" name="standart" id="standart" />
+                <label for="standart">Standart</label>
+                <input type="radio" name="standart" id="business" />
+                <label for="business">Business</label>
+                <input type="radio" name="standart" id="suite" />
+                <label for="suite">Suite</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="bed_type">Bed Type:</label>
+              </td>
+              <td>
+                <input type="radio" name="king" id="king" />
+                <label for="king">King</label>
+                <input type="radio" name="king" id="double" />
+                <label for="double">Double Double</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" name="checkbox" id="checkbox" />
+                <label for="checkbox">Smoking</label>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+        <fieldset>
+          <legend>Contact Information</legend>
+          <table>
+            <tr>
+              <td><label for="name">Name:</label></td>
+              <td><input type="name" name="name" id="name" required/></td>
+              <td><label for="" class="qizil">Name is required.</label></td>
+            </tr>
+            <tr>
+              <td><label for="email">Email:</label></td>
+              <td><input type="email" name="email" id="email" required/></td>
+              <td>
+                <label for="" class="qizil">Email address is invalid.</label>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="number">Phone:</label></td>
+              <td><input type="number" name="number" id="number" pattern="[1-9]{2}-[1-9]{3}-[1-9]{2}-[1-9]{2}" required/></td>
+              <td>
+                <label for="" class="qizil">Phone number is invalid.</label>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+        <br />
+        <center>
+          <input type="submit" value="Submit Reservation" />
+          <input type="reset" value="Clear" />
+        </center>
+      </form>
+    </div>
+  </body>
+</html>

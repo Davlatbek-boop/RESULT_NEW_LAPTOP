@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .mov{
+        border: 1px solid black;
+        margin-right: 30%;
+        margin-left: 30%;
+        padding-left: 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mov">
+      <center><h1>My feedback form</h1></center>
+      <ul>
+        <li>
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" />
+        </li>
+        <li>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" />
+        </li>
+        <li>
+          <label for="pass">Password:</label>
+          <input type="password" name="pass" id="pass" />
+        </li>
+  
+        <li>
+          <h4>Pleace check all the emotions that apply to you:</h4>
+          <ul>
+            <li>
+              <label for="angry">Angry </label>
+              <input type="checkbox" name="angry" id="angry" />
+            </li>
+            <li>
+              <label for="sad">Sad </label>
+              <input type="checkbox" name="sad" id="sad" />
+            </li>
+            <li>
+              <label for="happy">Happy </label>
+              <input type="checkbox" name="happy" id="happy" />
+            </li>
+            <li>
+              <label for="ambiv">Ambivalent </label>
+              <input type="checkbox" name="ambiv" id="ambiv" />
+            </li>
+          </ul>
+          <li>
+            <h4>How satisfied were you with our service?</h4>
+            <ul>
+              <li>
+                <label for="very">Very satisfied</label>
+                <input type="radio" name="dis" id="very" />
+              </li>
+              <li>
+                <label for="satisfied">Satisfied</label>
+                <input type="radio" name="dis" id="satisfied" />
+              </li>
+              <li>
+                <label for="care">Didn't care</label>
+                <input type="radio" name="dis" id="care" />
+              </li>
+              <li>
+                <label for="dis">Dissatisfied</label>
+                <input type="radio" name="dis" id="dis" />
+              </li>
+              <li>
+                <label for="verydis">Very dissatisfied</label>
+                <input type="radio" name="dis" id="verydis" />
+              </li>
+            </li>
+          </ul>
+          <li>
+            <label for="further">Further comments:</label>
+            <textarea name="further" id="further"></textarea>
+          </li>
+        </li>
+        <li>
+          <label for="photo">Bio photo: </label>
+          <input type="file" name="photo" id="photo" accept="image/*">
+        </li>
+        <li>
+          <label for="visit">Location visited: </label>
+          <select name="visit" id="visit">
+            <option value="visit" disabled selected hidden>Select Location</option>
+            <option value="visit">Toshkent shahar</option>
+            <option value="visit">Toshkent viloyati</option>
+            <option value="visit">Andijon viloyati</option>
+            <option value="visit">Farg'ona viloyati</option>
+            <option value="visit">Namangan viloyati</option>
+            <option value="visit">Sirdaryo viloyati</option>
+            <option value="visit">Jizzax viloyati</option>
+            <option value="visit">Samarqand viloyati</option>
+            <option value="visit">Qashqadaryo viloyati</option>
+            <option value="visit">Surxondaryo viloyati</option>
+            <option value="visit">Navoiy viloyati</option>
+            <option value="visit">Buxoro viloyati</option>
+            <option value="visit">Urganch viloyati</option>
+            <option value="visit">Qaraqalpog'iston Respublikasi</option>
+          </select>
+        </li>
+        <li>
+          <input type="submit">
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .jadval {
+        background-color: rgb(239, 240, 241);
+        margin-left: 30%;
+        margin-right: 30%;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        padding-left: 5px;
+      }
+      input, textarea {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      input.no-style{
+        width: unset;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jadval">
+      <form action="#">
+        <table>
+          <tr>
+            <td>
+              <label for="fname">First Name:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="fname"
+                id="fname"
+                placeholder="Enter your first name"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="lname">Last Name:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="lname"
+                id="lname"
+                placeholder="Enter your last name"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="email">Email:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="if should contain @"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="mobile">Mobile:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="mobile"
+                id="mobile"
+                placeholder="only 10 digits are allowed"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="gender">Gender:</label></td>
+            <td>
+              <input class="no-style" type="radio" name="gender" id="gender" />
+              <label for="gender">Male</label>
+              <input class="no-style" type="radio" name="gender" id="gender" />
+              <label for="gender">Female</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="date">Date Of Birth:</label></td>
+            <td><input class="" type="date" name="date" id="date" /></td>
+          </tr>
+          <tr>
+            <td><label for="arress">Address:</label></td>
+            <td><textarea name="address" id="address"></textarea></td>
+          </tr>
+          <tr>
+            <td><label for="city">City:</label></td>
+            <td><input type="text" name="city" id="city" /></td>
+          </tr>
+          <tr>
+            <td><label for="area">Area PIN:</label></td>
+            <td><input type="text" name="area" id="area" /></td>
+          </tr>
+          <tr>
+            <td><label for="state">State:</label></td>
+            <td><input type="text" name="state" id="state" /></td>
+          </tr>
+          <tr>
+            <td><label for="Qual">Quallifikation</label></td>
+            <td>
+              <select name="Qual" id="Qual">
+                <option value="Qual" disabled selected hidden>
+                  Select Quallifikation
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="4"><label for="spet">Specializaton</label></td>
+            <td>
+              <input class="no-style" type="checkbox" name="spet" id="spet" />
+              <label for="spet">Computer Sciense</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input class="no-style" type="checkbox" name="infor" id="infor" />
+              <label for="infor">Information Technology</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input class="no-style" type="checkbox" name="archi" id="archi" />
+              <label for="archi">Computer Architekture</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input class="no-style" type="checkbox" name="tele" id="tele" />
+              <label for="tele">Tele Communication</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pass">Password:</label></td>
+            <td><input type="password" name="pass" id="pass" /></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit" value="Regestered" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
