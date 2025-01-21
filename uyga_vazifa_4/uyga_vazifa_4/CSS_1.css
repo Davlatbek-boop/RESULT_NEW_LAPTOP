@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.contener {
+  margin-top: 5px;
+  border-top: 2px solid rgb(201, 200, 200);
+  background-color: rgb(243, 241, 241);
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.object {
+  margin-top: 3px;
+  text-decoration: none;
+  height: 100px;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: rgb(243, 241, 241);
+  font-size: 2vw;
+  font-family: "Times New Roman", Times, serif;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.object:hover {
+  background-color: thistle;
+}
+.object:active {
+  background-color: rgb(122, 129, 103);
+}
+
+.noutbook {
+  background-color: darkorange;
+  color: white;
+}
+.noutbook:hover {
+  background-color: rgb(223, 104, 25);
+}
+.noutbook:active {
+  background-color: rgb(119, 189, 128);
+  color: red;
+}

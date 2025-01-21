@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("https://stat.uz/images/photo_2022-04-25_14-50-31.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+div {
+  width: 500px;
+  height: 420px;
+  margin-top: 8%;
+  margin-left: 30%;
+  border: 1px solid black;
+}
+
+td {
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+td:hover {
+  background-color: rgb(95, 89, 89);
+}
+
+label {
+  color: white;
+}
+
+th label {
+  color: black;
+}
+
+.signin th {
+  background-color: yellow;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 36px;
+}
+
+.input {
+  background-color: yellow;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.input:hover {
+  background-color: rgb(192, 192, 22);
+}
+
+.input input {
+  padding: 5px;
+}
