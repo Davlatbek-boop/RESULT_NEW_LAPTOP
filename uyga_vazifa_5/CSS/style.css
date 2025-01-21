@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    max-width: 1100px;
+    padding: 30px 50px;
+    margin: auto;
+}
+
+header{
+    margin-top: 70px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+h2 a{
+    text-decoration: none;
+    font-size: 36px;
+    text-transform: lowercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    /* align-items: center; */
+    gap: 85px;
+
+}
+
+nav ul li a{
+    font-size: 20px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+nav ul li{
+    padding: 10px;
+}
+
+nav ul li a:hover{
+    color: black;
+}
+
+
+li{
+    transition: transform 0.4s ease, background-color 0.4s ease;
+            &:hover{
+                transform: scale(1.1);
+                transition: 0.4s;
+            }
+}
+
+li:hover{
+    background-color: rgba(212, 210, 210, 0.95);
+}
+
+figure{
+    width: 100%;
+}
+
+figure img{
+    width: 100%;
+}
+
+.quisque{
+    width: 280px;
+    height: 220px;
+    margin-top: 30px;
+    margin-left: 20px;
+   
+}
+
+.left__section .quisque h3{
+    font-size: 22px;
+    padding-left: 25px;
+}
+
+.mauris ul,
+.quisque ul{  
+    flex-direction: column;
+    font-size: 14px;
+    gap: 0px;
+    margin-top: 10px;
+    margin-left: 20px;
+    line-height: 28px;
+}
+
+.mauris ul li a,
+.quisque ul li a{
+    font-size: 15px;
+    color: rgb(148, 148, 5);
+    border-bottom: 1px solid rgb(207, 205, 205);
+    padding-left: 20px;
+    display: block;
+}
+.mauris{
+    width: 280px;
+    height: 220px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.boxtxt{
+    width: 280px;
+    height: 150px;
+    margin-top: 30px;
+    margin-left: 20px;
+    line-height: 25px;
+}
+
+.boxtxt p{
+    font-size: 15px;
+    color: black;
+    padding-left: 20px;
+}
+
+.main{
+    display: flex;
+    border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.content{
+    
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+
+.content .post h3 a{
+    text-decoration: none;
+    font-size: 36px;
+}
+
+.content .post p a{
+    color: rgb(214, 214, 37);
+}
+
+.postmeta{
+    margin-bottom: 50px;
+    margin-top: 15px;
+}
+
+.post{
+    margin-bottom: 50px;
+}
+
+.readmore{
+    display: block;
+    float: right;
+    border: 1px solid rgb(203, 200, 200);
+    margin-right: 50px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    
+}
+
+
+.readmore a{ 
+    text-decoration: none;
+}
+
+footer{
+    margin-top: 10px;
+    padding: 30px 50px;
+    margin: auto;
+    height: 30px;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
