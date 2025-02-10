@@ -1,0 +1,78 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+div{
+   border-radius: 50%;
+}
+
+.main{
+   background-color: blue;
+   width: 300px;
+   height: 300px;
+   position: relative;
+   border-radius: 0;
+}
+.quloq{
+   background-color: #A7BECE;
+   width: 100px;
+   height: 100px;
+   position: absolute;
+   margin: 45px 25px;
+}
+.quloq-2{
+   margin-left: 175px;
+}
+.quloq-ichi{
+   width: 80px;
+   height: 80px;
+   background-color: #809DAF;
+   position: absolute;
+   margin: 55px 35px;
+}
+
+.quloq-ichi-2{
+   margin-left: 185px;
+}
+
+.yuz{
+   position: absolute;
+   height: 200px;
+   width: 200px;
+   margin: 50px 50px;
+   background-color: #A7BECE;
+}
+
+.koz{
+   width: 60px;
+   height: 60px;
+   background-color: #ffffff;
+   position: absolute;
+   margin: 90px 90px;
+}
+
+.koz-2{
+   margin-left: 155px;
+}
+
+.koz-qorachiq{
+   width: 20px;
+   height: 20px;
+   background-color: #000000;
+   position: absolute;
+   margin: 110px 110px;
+}
+
+.koz-qorachiq-2{
+   margin-left: 175px;
+}
+
+.burun{
+   width: 30px;
+   height: 60px;
+   background-color: rgb(223, 124, 10);
+   border-radius: 45%;
+   position: absolute;
+   margin: 130px 135px;
+}
