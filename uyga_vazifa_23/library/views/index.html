@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Library</title>
+   <link rel="stylesheet" href="./CSS/index.css">
+   <style>
+      * {
+   box-sizing: border-box;
+}
+
+
+.list-element{
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20%;
+}
+
+.almashishlar{
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 7%;
+}
+
+.qidiruv{
+   border-radius: 5px;
+}
+
+a{
+   text-decoration: none;
+   color: black;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 18px;
+   border: 1px solid black;
+   padding: 5px;
+   border-radius: 5px;
+}
+
+a:hover{
+   background-color: blue;
+   color: white;
+   box-shadow: 5px 5px 10px 5px rgba(255, 0, 0, 0.3);
+}
+   </style>
+</head>
+<body>
+   <header class="Unilibrary">
+      <div class="bolim-1">
+         <ul class="list-element">
+            <li><h1>Unilibrary</h1></li>
+            <li>
+               <form action="qidiruv">
+                  <input type="text" class="qidiruv" name="qidiruv" placeholder="Qidiruv" required>
+               </form>
+            </li>
+            <li>O'zbekcha</li>
+            <li>Kirish</li>
+         </ul>
+      </div>
+      <div class="bolim-2">
+         <ul class="almashishlar">
+            <li><a href="/Adabiyotlar">Adabiyotlar</a></li>
+            <li><a href="/Maqolalar">Maqolalar</a></li>
+            <li><a href="/Dissertatsiyalar">Dissertatsiyalar</a></li>
+            <li><a href="/Monografiyalar">Monografiyalar</a></li>
+            <li><a href="/Muassasalar">Muassasalar</a></li>
+            <li><a href="/Mualliflar">Mualliflar</a></li>
+            <li><a href="/Jurnallar">Jurnallar</a></li>
+         </ul>
+      </div>
+   </header>
+</body>
+</html>
