@@ -1,0 +1,37 @@
+<section>
+  <div>
+    <form action="">
+      <% if (title == "Adabiyotlar Page") { %>
+      <label for="">Adabiyot nomi</label><% } %>
+      <% if (title == "Maqolalar Page") { %>
+      <label for="">Maqola nomi</label><% } %>
+      <% if (title == "Dissertatsiya Page") { %>
+      <label for="">Dissertatsiya nomi</label><% } %>
+      <% if (title == "Monografiya Page") { %>
+      <label for="">Monografiya nomi</label><% } %>
+      <% if (title == "Jurnallar Page") { %>
+      <label for="">Jurnallar nomi</label><% } %>
+      <% if (title == "Muassasalar Page") { %>
+      <label for="">Muassasalar nomi</label><% } %>
+      <input type="text" />
+    </form>
+  </div>
+  <div>
+    <form action="">
+      <% if (title == "Jurnallar Page") { %>
+      <label for="">Jurnallar turi</label><% }  else if (title == "Muassasalar Page" ){%>
+      <label for="">Davlat nomi</label><% } else {%>
+      <label for="">Muallif ismi sharifi</label><% } %>
+      <input type="text" />
+    </form>
+  </div>
+   <% if (title == "Muassasalar Page") { %>
+      <div>
+    <form action="">
+      <label for="">Hudud nomi</label>
+      <input type="text" />
+    </form>
+  </div><% } %>
+  <button class="qidiruv">Qidiruv</button>
+  <button>Qidiruv filtri</button>
+</section>

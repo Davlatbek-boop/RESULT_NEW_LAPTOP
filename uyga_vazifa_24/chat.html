@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NodeJS CHAT Example</title>
+    <style>
+      body {
+        background-color: black;
+        color: greenyellow;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      header {
+        text-align: center;
+      }
+      main {
+        display: none;
+      }
+      .nick-name {
+        border: 1px solid greenyellow;
+        text-align: center;
+        padding: 2em 1.5em;
+        margin: 5% 30%;
+      }
+      .button-nick-name {
+        background-color: black;
+        color: greenyellow;
+        border-top: 2px solid rgb(71, 71, 71);
+        border-left: 2px solid rgb(71, 71, 71);
+        padding: 3% 5%;
+        font-size: 1.5em;
+      }
+      #massages {
+        margin-left: 1em;
+        list-style: none;
+      }
+      #form {
+        display: flex;
+      }
+      input,
+      label {
+        display: block;
+      }
+      input {
+        outline: none;
+        border: none;
+        background-color: black;
+        color: greenyellow;
+        padding: 1em 0.5em;
+        font-size: 1.5em;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        flex: 1;
+      }
+      label {
+        padding: 1em 0.5em;
+        font-size: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>NODE JS CHAT</h1>
+      <span id="status">OFFLINE</span>
+    </header>
+    <section id="section">
+      <div class="nick-name">
+        <form action="">
+          <input
+            type="text"
+            placeholder="Nick name..."
+            class="input-nickname"
+            id="nickName"
+            required
+          />
+        </form>
+        <button class="button-nick-name" onclick="addUsers()">
+          Connect to WebSocket
+        </button>
+      </div>
+    </section>
+    <main id="main">
+      <p id="chatId"></p>
+      <p id="username"></p>
+      <ul id="massages">
+        <li></li>
+      </ul>
+      <form id="form">
+        <label for="message">&gt;</label>
+        <input
+          type="text"
+          name="input"
+          id="input"
+          required
+          autofocus
+          autocomplete="off"
+        />
+      </form>
+    </main>
+    <script>
+      function addUsers() {
+        const main = document.getElementById("main");
+        main.style.display = "block";
+        const section = document.getElementById("section");
+        section.style.display = "none";
+      }
+
+      let username = document.getElementById("nickName"); // nickName input element
+      const main = document.getElementById("main");
+      const section = document.getElementById("section");
+      const status = document.getElementById("status");
+      const messages = document.getElementById("massages");
+      const form = document.getElementById("form");
+      const input = document.getElementById("input");
+
+      const ws = new WebSocket("ws://localhost:3000");
+      let userId = ""; // Foydalanuvchining ID sini saqlaymiz
+
+      // Foydalanuvchidan ismini so'rash
+      function askNickName() {
+        section.style.display = "block";
+        main.style.display = "none";
+      }
+
+      // Xabarni chop etish
+      function printMassage(username, message, isOwnMessage) {
+        const li = document.createElement("li");
+        li.className = isOwnMessage ? "right" : "left"; // O'ng yoki chap tomonda ko'rsatish
+
+        li.innerHTML = `<b>${username}:</b> ${message}`;
+        messages.appendChild(li);
+      }
+
+      // Formani yuborish (xabarni serverga jo'natish)
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (username.value.trim() === "") {
+          alert("Iltimos, ismingizni kiriting!");
+          return;
+        }
+
+        // Xabarni JSON formatida yuborish
+        ws.send(JSON.stringify({ user: username.value, text: input.value }));
+        input.value = ""; // Inputni tozalash
+      });
+
+      // WebSocket ustida ishlash
+      ws.onopen = () => {
+        askNickName(); // Ism so'rash uchun
+      };
+
+      ws.onclose = () => setStatus("CHATDAN UZILDI");
+
+      ws.onmessage = (response) => {
+        const data = JSON.parse(response.data);
+
+        if (data.type === "ID") {
+          // ID olindi va foydalanuvchi nomi tasdiqlandi
+          userId = data.id;
+          section.style.display = "none";
+          main.style.display = "block";
+          setStatus("CHATGA ULANDI");
+        } else {
+          // Xabar kelgan bo'lsa, uni ekranda chiqarish
+          printMassage(data.user, data.text, data.userId === userId); // Xabarni o'ngga yoki chapga joylash
+        }
+      };
+
+      function setStatus(value) {
+        status.innerHTML = value;
+      }
+    </script>
+  </body>
+</html>

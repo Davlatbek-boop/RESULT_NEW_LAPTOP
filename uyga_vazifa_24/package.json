@@ -1,0 +1,16 @@
+{
+  "name": "nodejs_5",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node --watch app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "uuid": "^11.0.5",
+    "ws": "^8.18.0"
+  }
+}
