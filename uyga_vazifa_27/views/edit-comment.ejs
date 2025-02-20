@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h2>Tanlangan Comment ma'lumotlarini tahrirlash</h2>
+    <form
+      action="/editComment/<%= comment.id %>?_method=PUT"
+      method="post"
+      id="post-form"
+    >
+      <label for="name">Comment name:</label><br /><br />
+      <input
+        type="text"
+        name="username"
+        id="name"
+        value="<%= comment.name %>"
+      />
+      <br /><br />
+
+      <label for="username">Email:</label><br /><br />
+      <input
+        type="email"
+        name="name"
+        id="username"
+        value="<%= comment.email %>"
+      />
+      <br /><br />
+
+      <label for="body">Body:</label><br /><br />
+      <input type="text" name="body" id="body" value="<%= comment.body %>" />
+      <br /><br />
+
+      <button type="submit">Edit comment</button>
+    </form>
+  </body>
+</html>
