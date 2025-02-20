@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h2><%= user.name %></h2>
+    <p>User name: <%= user.username %></p>
+    <p>User email: <%= user.email %></p>
+    <p>User phone: <%= user.phone %></p>
+    <p>User address: <%= user.address?.city %></p>
+    <p>User company: <%= user.company?.name %></p>
+
+    <a href="/edit/<%= user.id %>">Edit User</a>
+    <button data-id="<%= user.id %>" id="del-user">Delete user</button>
+
+
+    <script>
+      const delUser = document.getElementById("del-user")
+      delUser.addEventListener("click", (e)=>{
+        const id = e.target?.dataset?.id || null
+        if (id){
+          fetch(`/user/${id}`, {
+            method:"DELETE"
+          }).then(()=>{
+            console.log("User deleted");
+            alert("User deleted")
+            setTimeout(() => {
+              window.location.href = "/users"
+            }, 2000);
+          }).catch(()=>{
+            console.log("Userni o'chirishda xatolik")
+          })
+        }
+      })
+    </script>
+  </body>
+</html>
