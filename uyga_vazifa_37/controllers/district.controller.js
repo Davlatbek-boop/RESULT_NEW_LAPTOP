@@ -50,7 +50,7 @@ const deleteDistrictById = async (req, res) => {
     if (!mongoose.isValidObjectId(id)) {
       return res.status(400).send({ error: "incorrent ObjectID" });
     }
-    const district = await District.deleteOne({ _id: id });
+    const district = await District.deleteOne(id);
     res.send({ district });
   } catch (error) {
     console.log(error);

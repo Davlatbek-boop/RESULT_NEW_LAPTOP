@@ -53,7 +53,7 @@ const deleteToolById = async (req, res) => {
     if (!mongoose.isValidObjectId(id)) {
       return res.status(400).send({ error: "incorrent ObjectID" });
     }
-    const toool = await Tool.deleteOne({ _id: id });
+    const toool = await Tool.deleteOne(id);
     res.send({ tool });
   } catch (error) {
     console.log(error);

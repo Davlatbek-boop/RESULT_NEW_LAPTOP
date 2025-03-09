@@ -57,7 +57,7 @@ const deleteUserById = async (req, res) => {
     if (!mongoose.isValidObjectId(id)) {
       return res.status(400).send({ error: "incorrent ObjectID" });
     }
-    const user = await User.deleteOne({ _id: id });
+    const user = await User.deleteOne(id);
     res.send({ user });
   } catch (error) {
     console.log(error);
