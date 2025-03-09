@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const districtSchema = new Schema(
   {
-    name: String,
+    name: { type: String, trim: true, uppercase: true },
   },
   {
     versionKey: false,

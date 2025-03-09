@@ -1,78 +1,84 @@
-const Tool = require("../schemas/Tools");
+const Shop = require("../schemas/Shops");
 const mongoose = require("mongoose");
 
-const getAllTools = async (req, res) => {
+const getAllShops = async (req, res) => {
   try {
-    const tool = await Tool.find({});
-    res.send({ tool });
+    const shop = await Shop.find({});
+    res.send({ shop });
   } catch (error) {
     console.log(error);
     res.status(500).send({ error: "Serverda xatolik" });
   }
 };
 
-const getToolById = async (req, res) => {
+const getShopById = async (req, res) => {
   try {
     const id = req.params.id;
     if (!mongoose.isValidObjectId(id)) {
       return res.status(400).send({ error: "incorrent ObjectID" });
     }
-    const tool = await Tool.findById(id);
-    res.send({ tool });
+    const shop = await Shop.findById(id);
+    res.send({ shop });
   } catch (error) {
     console.log(error);
     res.status(500).send({ error: "Serverda xatolik" });
   }
 };
 
-const addTool = async (req, res) => {
+const addShop = async (req, res) => {
   try {
-    const { name, brand, description, tool_price } = req.body;
+    const { name, ownerId, phoneNumber, districtId, address, location } =
+      req.body;
 
-    const oldTool = await Tool.findOne({ name });
-    if (oldTool) {
+    const oldShop = await Shop.findOne({
+      name,
+    });
+    if (oldShop) {
       return res.status(400).send({ error: "Bunday foydalanuvchi mavjud" });
     }
-    const newTool = await Tool.create({
+    const newShop = await Shop.create({
       name,
-      brand,
-      description,
-      tool_price,
+      ownerId,
+      phoneNumber,
+      districtId,
+      address,
+      location,
     });
-    await newTool.save();
-    res.status(201).send({ message: "Foydalanubchi yaratildi", newTool });
+    await newShop.save();
+    res.status(201).send({ message: "Foydalanubchi yaratildi", newShop });
   } catch (error) {
     console.log(error);
     res.status(500).send({ error: "Serverda xatolik" });
   }
 };
 
-const deleteToolById = async (req, res) => {
+const deleteShopById = async (req, res) => {
   try {
     const id = req.params.id;
     if (!mongoose.isValidObjectId(id)) {
       return res.status(400).send({ error: "incorrent ObjectID" });
     }
-    const toool = await Tool.deleteOne({ _id: id });
-    res.send({ tool });
+    const shop = await Shop.deleteOne({ _id: id });
+    res.send({ shop });
   } catch (error) {
     console.log(error);
     res.status(500).send({ error: "Serverda xatolik" });
   }
 };
 
-const updateToolById = async (req, res) => {
+const updateShopById = async (req, res) => {
   try {
     const id = req.params.id;
-    const { name, brand, description, tool_price } = req.body;
+    const { name, ownerId, phoneNumber, districtId, address, location } =
+      req.body;
     if (!mongoose.isValidObjectId(id)) {
       return res.status(400).send({ error: "incorrent ObjectID" });
     }
-    const tool = await Tool.updateOne(
+    const shop = await Shop.updateOne(
       { _id: id },
-      { name, brand, description, tool_price }
+      { name, ownerId, phoneNumber, districtId, address, location }
     );
-    res.send({ tool });
+    res.send({ shop });
   } catch (error) {
     console.log(error);
     res.status(500).send({ error: "Serverda xatolik" });
@@ -80,9 +86,9 @@ const updateToolById = async (req, res) => {
 };
 
 module.exports = {
-  getAllTools,
-  getToolById,
-  addTool,
-  deleteToolById,
-  updateToolById,
+  getAllShops,
+  getShopById,
+  addShop,
+  deleteShopById,
+  updateShopById,
 };

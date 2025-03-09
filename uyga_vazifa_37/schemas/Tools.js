@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const toolSchema = new Schema(
   {
-    name: String,
+    name: { type: String, trim: true, uppercase: true },
     brand: String,
     description: String,
     tool_price: Number,
