@@ -1,0 +1,6 @@
+{
+    "port":3001,
+    "dbUri":"mongodb+srv://Hojiakbar:hoji2201@cluster0.fvypg.mongodb.net/wikiuz?retryWrites=true&w=majority&appName=Cluster0",
+    "tokenKey":"MyVeryVerSecretKey",
+    "tokenTime":86400
+}

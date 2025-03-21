@@ -1,0 +1,11 @@
+{
+  "port": 3000,
+  "dbUri": "mongodb+srv://admin:admin12345@cluster0.x30uj.mongodb.net/express_cargo?retryWrites=true&w=majority&appName=Cluster0",
+  "tokenKey": "MyFirstTokenKey",
+  "tokenTime": 86400,
+  "smtp_password": "qvyx oadg rrhq wepm",
+  "smtp_host": "smtp.gmail.com",
+  "smtp_port": 587,
+  "smtp_user": "salimovdavlat0526@gmail.com",
+  "api_url":"http://localhost/3001"
+}
