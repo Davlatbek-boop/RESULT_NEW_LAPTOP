@@ -1,0 +1,23 @@
+{
+  "port": 3003,
+  "db_host": "localhost",
+  "db_username": "postgres",
+  "db_password": "root",
+  "db_port": 5432,
+  "db_name": "sport_news",
+  "tokenKey":"MyVeryVeryVerySecretKey",
+  "tokenTime":86400,
+  "access_time": "5h",
+  "refresh_time": "5d",
+  "refresh_cookie_time": 1296000000,
+  "access_key": "UserAccessTokenSecretKey",
+  "refresh_key": "UserRefreshTokenSecretKey",
+  "expiration_minute": 3,
+  "crypt_password": "MySecretPasswordForOTP",
+  "iv": "abcd1234",
+  "smtp_password": "qvyx oadg rrhq wepm",
+  "smtp_host": "smtp.gmail.com",
+  "smtp_port": 587,
+  "smtp_user": "salimovdavlat0526@gmail.com",
+  "api_url": "http://localhost/3003"
+}
