@@ -1,0 +1,36 @@
+const router = require("express").Router();
+const usersRoute = require("./users.routes");
+const userDocRoute = require("./user_documents.routes");
+const userSkillsRoute = require("./user_skills.routes");
+const passportDataRoute = require("./passport_data.routes");
+const companyRoute = require("./companys.routes");
+const companyWorkerRoute = require("./company_workers.routes");
+const countryRoute = require("./country.routes");
+const categoryRoute = require("./category.routes");
+const jobRoute = require("./jobs.routes");
+const reviewRoute = require("./reviews.routes");
+const interestRoute = require("./interests.routes");
+const applicationRoute = require("./application.routes");
+const contactRoute = require("./contacts.routes");
+const requirementRoute = require("./requirement.routes");
+const jobRequirementRoute = require("./job_requirements.routes");
+const jobInterviewRoute = require("./job_interview.routes");
+
+router.use("/users", usersRoute);
+router.use("/userdoc", userDocRoute);
+router.use("/userskills", userSkillsRoute);
+router.use("/passportdata", passportDataRoute);
+router.use("/company", companyRoute);
+router.use("/companyworker", companyWorkerRoute);
+router.use("/country", countryRoute);
+router.use("/category", categoryRoute);
+router.use("/job", jobRoute);
+router.use("/review", reviewRoute);
+router.use("/interest", interestRoute);
+router.use("/application", applicationRoute);
+router.use("/contact", contactRoute);
+router.use("/requirement", requirementRoute);
+router.use("/jobrequirement", jobRequirementRoute);
+router.use("/jobinterview", jobInterviewRoute);
+
+module.exports = router;
