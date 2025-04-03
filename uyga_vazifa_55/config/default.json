@@ -1,0 +1,13 @@
+{
+  "port": 3003,
+  "db_host": "localhost",
+  "db_username": "postgres",
+  "db_password": "root",
+  "db_port": 5432,
+  "db_name": "migrantim",
+  "access_time": "5h",
+  "refresh_time": "5d",
+  "access_key": "UserAccessTokenSecretKey",
+  "refresh_key": "UserRefreshTokenSecretKey",
+  "refresh_cookie_time": 1296000000
+}
